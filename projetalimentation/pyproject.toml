@@ -7,7 +7,12 @@ authors = [
     { name = "Thomas Barat", email = "thomas.barat@etu.uni-tours.fr" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "ipython>=9.0.2",
+    "matplotlib>=3.10.1",
+    "pandas>=2.2.3",
+    "scipy>=1.15.2",
+]
 
 [project.scripts]
 projetalimentation = "projetalimentation:main"
