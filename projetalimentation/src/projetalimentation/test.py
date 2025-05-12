@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.optimize as so
 from IPython.display import display
+from __init__ import *
 
 np.set_printoptions(precision=1, suppress=True)
 
@@ -33,6 +34,7 @@ besoins = np.array([75, # Proteines
                 9, # Fer
                 800, # Calcium 
                 45]) # Fibre
+
 
 
 
@@ -71,7 +73,7 @@ for s in range(len(u) - 1):
     name = rename_aliment(old_name)  # Renommer l'aliment (fonction existante)
     Phrase += ' de {:0.2f} g de {}'.format(gr, name)
 
-# Dernier aliment
+## Dernier aliment
 s = len(u) - 1
 gr = Result.x[u[s]] * 100
 old_name = Al.index[u[s]]
