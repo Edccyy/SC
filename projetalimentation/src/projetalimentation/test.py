@@ -20,9 +20,10 @@ Al.iloc[[10*k for k in range(5)],:]
 
 
 A = np.array(Al).T
-coeff = A[:-1]
-z_ori1 = A[-1]  # Prix
-beta = np.array([75, # Proteines
+
+valeur_nutri = A[:-1]
+prix = A[-1]  # Prix
+besoins = np.array([75, # Proteines
                 90, # Lipides
                 225, # Glucides
                 2000, # Calories
@@ -30,7 +31,7 @@ beta = np.array([75, # Proteines
                 800, # Calcium 
                 45]) # Fibre
 
-Result = so.linprog(z_ori1, A_ub = -coeff, b_ub = -beta, method = 'highs')
+Result = so.linprog(prix, A_ub = -valeur_nutri, b_ub = -besoins, method = 'highs')
 
 
 
