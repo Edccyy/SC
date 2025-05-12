@@ -10,17 +10,20 @@ np.set_printoptions(precision=1, suppress=True)
 
 
 
+#Lecture de la base de données
 Al = pd.read_csv(
                 'C:/Cours/Supply Chain/SC/projetalimentation/data/Aliments.csv', 
                 sep=';', 
                 index_col=0)
 
 Al.iloc[[10*k for k in range(5)],:]
-
-
-
 A = np.array(Al).T
 
+
+
+
+
+#Entrée des besoins
 valeur_nutri = A[:-1]
 prix = A[-1]  # Prix
 besoins = np.array([75, # Proteines
@@ -31,16 +34,25 @@ besoins = np.array([75, # Proteines
                 800, # Calcium 
                 45]) # Fibre
 
+
+
+
+# Résolution du problème d'optimisation
 Result = so.linprog(prix, A_ub = -valeur_nutri, b_ub = -besoins, method = 'highs')
 
 
 
+
+
+# Affichage basique des résultats
 print( "Cout minimal : ", Result.fun)
 print("Quantité optimale : ", Result.x)
 
 
 
 
+
+# Affichage avancé des résultats
 u = np.where(Result.x > 0)[0]  # Qté opti sup à 0
 
 for k in u:
