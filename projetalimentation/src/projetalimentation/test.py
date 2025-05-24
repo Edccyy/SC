@@ -82,3 +82,58 @@ Phrase += ' et de {:0.2f} g de {}. '.format(gr, name)
 Phrase += ' Il coûte un total de {:0.2f} euros.'.format(Result.fun)
 
 print(Phrase)
+
+
+## 2)  Les 10%
+# Par Abdul
+
+A_ub = -valeur_nutri
+b_ub = -besoins
+A_ub2 = valeur_nutri
+b_ub2 = 1.1 * besoins
+
+A_total = np.vstack((A_ub, A_ub2))
+b_total = np.hstack((b_ub, b_ub2))
+
+Result = so.linprog(prix, A_ub = -valeur_nutri, b_ub = -besoins, method = 'highs')
+
+
+# Limite supérieure : 110 % des besoins
+A_ub_inf = -valeur_nutri            # ≥ besoins <=> -valeurs ≤ -besoins
+b_ub_inf = -besoins
+
+# Limite supérieure : ≤ 110% des besoins
+A_ub_sup = valeur_nutri
+b_ub_sup = 1.1 * besoins
+
+# Contrainte combinée
+A_total = np.vstack((A_ub_inf, A_ub_sup))
+b_total = np.hstack((b_ub_inf, b_ub_sup))
+
+# Résolution avec nouvelles contraintes
+Result = so.linprog(prix, A_ub=A_total, b_ub=b_total, method='highs')
+
+
+# Vérification des apports réels
+apports_obtenus = valeur_nutri @ Result.x  # produit matriciel
+pourcentages = apports_obtenus / besoins * 100
+
+print("\nVérification des apports nutritionnels obtenus :")
+nutriments = ['Protéines', 'Lipides', 'Glucides', 'Calories', 'Fer', 'Calcium', 'Fibres']
+
+for i in range(len(nutriments)):
+    print(f"{nutriments[i]:<10} : {apports_obtenus[i]:>8.2f} ({pourcentages[i]:5.1f} % des besoins)")
+
+# Création d'un tableau résumé avec pandas
+nutriments = ['Protéines', 'Lipides', 'Glucides', 'Calories', 'Fer', 'Calcium', 'Fibres']
+
+df_resultats = pd.DataFrame({
+    'Nutriment': nutriments,
+    'Besoins': besoins,
+    'Apport obtenu': apports_obtenus,
+    '% des besoins': pourcentages
+})
+
+# Affichage du tableau
+print("\nRésumé nutritionnel :")
+display(df_resultats)
