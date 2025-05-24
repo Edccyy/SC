@@ -5,12 +5,14 @@ import scipy.optimize as so
 from IPython.display import display
 from __init__ import *
 
+
+
 np.set_printoptions(precision=1, suppress=True)
 
 
 
 
-
+## 1)  Le problème de base___________________________________________________________________________________________________________________
 #Lecture de la base de données
 Al = pd.read_csv(
                 'C:/Cours/Supply Chain/SC/projetalimentation/data/Aliments.csv', 
@@ -37,31 +39,10 @@ besoins = np.array([75, # Proteines
 Result = so.linprog(prix, A_ub = -valeur_nutri, b_ub = -besoins, method = 'highs')
 
 
-# Affichage basique des résultats
-print("")
-print( "Cout minimal : ", Result.fun)
-print("")
-
-
-# Affichage avancé des résultats
-u = np.where(Result.x > 0)[0]  # Qté opti sup à 0
-
-for k in u:
-    print(Al.index[k])  # Nom de l'aliment
-    print('{:0.2f} g'.format(Result.x[k] * 100))  # Quantité optimale en grammes
-
-def rename_aliment(name):
-    return name.replace("–", "-").strip()
-
-
-
-
 
 
 
 ## 2)  Les 10%___________________________________________________________________________________________________________________
-# Par Abdul
-
 A_ub = -valeur_nutri
 b_ub = -besoins
 A_ub2 = valeur_nutri
@@ -101,14 +82,28 @@ df_resultats = pd.DataFrame({
     'Nutriment': nutriments,
     'Besoins': besoins,
     'Apport obtenu': apports_obtenus,
-    '% des besoins': pourcentages
-})
+    '% des besoins': pourcentages})
 
+
+
+
+## Affichage des résultats____________________________________________________________________________________________________________________
+
+# Affichage basique des résultats
+print("")
+print( "Cout : ", Result.fun)
+print("")
+
+
+# Affichage avancé des résultats
+u = np.where(Result.x > 0)[0]  # Qté opti sup à 0
+
+for k in u:
+    print(Al.index[k])  # Nom de l'aliment
+    print('{:0.2f} g'.format(Result.x[k] * 100))  # Quantité optimale en grammes
+
+def rename_aliment(name):
+    return name.replace("–", "-").strip()
 # Affichage du tableau
 print("\nRésumé nutritionnel :")
-display(df_resultats)
-
-
-
-
-# Faire en sorte que l'on puisse creer nos propres besoins _________________________________________________________________________
+print(df_resultats.to_string(index=False))
