@@ -38,8 +38,9 @@ Result = so.linprog(prix, A_ub = -valeur_nutri, b_ub = -besoins, method = 'highs
 
 
 # Affichage basique des résultats
+print("")
 print( "Cout minimal : ", Result.fun)
-print("Quantité optimale : ", Result.x)
+print("")
 
 
 # Affichage avancé des résultats
@@ -52,25 +53,7 @@ for k in u:
 def rename_aliment(name):
     return name.replace("–", "-").strip()
 
-Phrase = 'Un repas est constitué de '
-for s in range(len(u) - 1):
-    if s > 0:
-        Phrase += ','
-    gr = Result.x[u[s]] * 100  # Quantité optimale en grammes
-    old_name = Al.index[u[s]]  # Nom de l'aliment
-    name = rename_aliment(old_name)  # Renommer l'aliment (fonction existante)
-    Phrase += ' de {:0.2f} g de {}'.format(gr, name)
 
-
-## Dernier aliment
-s = len(u) - 1
-gr = Result.x[u[s]] * 100
-old_name = Al.index[u[s]]
-name = rename_aliment(old_name)
-Phrase += ' et de {:0.2f} g de {}. '.format(gr, name)
-Phrase += ' Il coûte un total de {:0.2f} euros.'.format(Result.fun)
-
-print(Phrase)
 
 
 
@@ -110,11 +93,6 @@ Result = so.linprog(prix, A_ub=A_total, b_ub=b_total, method='highs')
 apports_obtenus = valeur_nutri @ Result.x  # produit matriciel
 pourcentages = apports_obtenus / besoins * 100
 
-print("\nVérification des apports nutritionnels obtenus :")
-nutriments = ['Protéines', 'Lipides', 'Glucides', 'Calories', 'Fer', 'Calcium', 'Fibres']
-
-for i in range(len(nutriments)):
-    print(f"{nutriments[i]:<10} : {apports_obtenus[i]:>8.2f} ({pourcentages[i]:5.1f} % des besoins)")
 
 # Création d'un tableau résumé avec pandas
 nutriments = ['Protéines', 'Lipides', 'Glucides', 'Calories', 'Fer', 'Calcium', 'Fibres']
