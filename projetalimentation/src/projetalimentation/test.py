@@ -21,9 +21,6 @@ Al.iloc[[10*k for k in range(5)],:]
 A = np.array(Al).T
 
 
-
-
-
 #Entrée des besoins
 valeur_nutri = A[:-1]
 prix = A[-1]  # Prix
@@ -36,22 +33,13 @@ besoins = np.array([75, # Proteines
                 45]) # Fibre
 
 
-
-
-
 # Résolution du problème d'optimisation
 Result = so.linprog(prix, A_ub = -valeur_nutri, b_ub = -besoins, method = 'highs')
-
-
-
 
 
 # Affichage basique des résultats
 print( "Cout minimal : ", Result.fun)
 print("Quantité optimale : ", Result.x)
-
-
-
 
 
 # Affichage avancé des résultats
@@ -73,6 +61,7 @@ for s in range(len(u) - 1):
     name = rename_aliment(old_name)  # Renommer l'aliment (fonction existante)
     Phrase += ' de {:0.2f} g de {}'.format(gr, name)
 
+
 ## Dernier aliment
 s = len(u) - 1
 gr = Result.x[u[s]] * 100
@@ -84,7 +73,10 @@ Phrase += ' Il coûte un total de {:0.2f} euros.'.format(Result.fun)
 print(Phrase)
 
 
-## 2)  Les 10%
+
+
+
+## 2)  Les 10%___________________________________________________________________________________________________________________
 # Par Abdul
 
 A_ub = -valeur_nutri
@@ -141,7 +133,4 @@ display(df_resultats)
 
 
 
-
-
-
-# Faire en sorte que l'on puisse creer nos propres besoins 
+# Faire en sorte que l'on puisse creer nos propres besoins _______________________________________________________________________
