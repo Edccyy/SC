@@ -82,3 +82,13 @@ Phrase += ' et de {:0.2f} g de {}. '.format(gr, name)
 Phrase += ' Il coûte un total de {:0.2f} euros.'.format(Result.fun)
 
 print(Phrase)
+
+
+
+
+
+
+
+
+
+# Faire en sorte que lon puiss creer nos propres besoins 
