@@ -107,3 +107,9 @@ def rename_aliment(name):
 # Affichage du tableau
 print("\nRésumé nutritionnel :")
 print(df_resultats.to_string(index=False))
+
+
+
+
+
+# Possibilité de mettre des besoins personnalisés
