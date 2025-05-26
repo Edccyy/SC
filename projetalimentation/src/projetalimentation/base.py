@@ -125,6 +125,3 @@ Affichage du résumé nutritionnel
 """
 print("\nRésumé nutritionnel :")
 print(df_resultats.to_string(index=False))
-
-
-print(Result.x)

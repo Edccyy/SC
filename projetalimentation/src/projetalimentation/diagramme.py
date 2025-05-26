@@ -1,9 +1,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+""" 
+Importation des besoins nutritionnels et des apports obtenus 
+"""
 from base import besoins, apports_obtenus
 
-# Exemple de besoins de base et besoins répondus (à adapter selon vos données)
+
+"""
+Besoins nutritionnels de base
+"""
 besoins_base = {
     "Protéines" : besoins[0],
     "Lipides": besoins[1],
@@ -13,6 +19,10 @@ besoins_base = {
     "Calcium": besoins[5],
     "Fibre": besoins[6]
 }
+
+"""
+Apport obtenue par le programme
+"""
 
 besoins_repondu = {
     "Protéines" : apports_obtenus[0],
@@ -24,15 +34,17 @@ besoins_repondu = {
     "Fibre": apports_obtenus[6]
 }
 
+
+
+"""
+Diagramme de Kiviat des besoins nutritionnels et des apports obtenus
+"""
 labels = list(besoins_base.keys())
 n = len(labels)
 
-print(besoins_repondu)
-# Préparation des données pour le diagramme de Kiviat (Radar)
 values_base = list(np.array(list(besoins_base.values())) / np.array(list(besoins_base.values())) * 100)
 values_repondu = list(np.array(list(besoins_repondu.values())) / np.array(list(besoins_base.values())) * 100)
 
-# Boucler pour fermer le polygone
 values_base += values_base[:1]
 values_repondu += values_repondu[:1]
 labels += labels[:1]
