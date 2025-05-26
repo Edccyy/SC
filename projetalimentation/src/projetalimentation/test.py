@@ -135,7 +135,7 @@ print(df_resultats.to_string(index=False))
 
 def ajouter_besoin(besoins):
     """
-    Ajoute un nouvel aliment au DataFrame Al.
+    Ajoute de nouveaux besoins
     """
     nouveaux_besoins = [
         besoins.proteines,
