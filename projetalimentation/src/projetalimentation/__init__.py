@@ -14,15 +14,6 @@ class besoins(object):
         self.fibres:int = fibres*jours
         self.jours:int = jours
 
-    def __eq__(self, autre):
-        return self.nom == autre.nom
-    
-    def __super__(self, autre):
-        return self.nom > autre.nom
-    
-    def __sub__(self, autre):
-        return self.nom < autre.nom
-
     def __hash__(self):
         return hash(self.nom)
     
@@ -30,7 +21,7 @@ class besoins(object):
 
 class aliment(object):
 
-    def __init__(self, nom:str, proteines:int, lipides:int, glucides:int, calories:int, fer:int, calcium, fibres:int):
+    def __init__(self, nom:str, proteines:int, lipides:int, glucides:int, calories:int, fer:int, calcium, fibres:int, prix:int):
         self.nom :str = nom
         self.proteines:int = proteines
         self.lipides:int = lipides
@@ -39,4 +30,4 @@ class aliment(object):
         self.fer:int = fer
         self.calcium:int = calcium
         self.fibres:int = fibres
-        
+        self.prix:int = prix
