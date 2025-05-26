@@ -13,7 +13,10 @@ np.set_printoptions(precision=1, suppress=True)
 
 
 ## 1)  Le problème de base___________________________________________________________________________________________________________________
-#Lecture de la base de données
+
+"""
+Importation des données
+"""
 Al = pd.read_csv(
                 'C:/Cours/Supply Chain/SC/projetalimentation/data/Aliments.csv', 
                 sep=';', 
@@ -23,7 +26,9 @@ Al.iloc[[10*k for k in range(5)],:]
 A = np.array(Al).T
 
 
-#Entrée des besoins
+"""
+Création des Besoins
+"""
 valeur_nutri = A[:-1]
 prix = A[-1]  # Prix
 besoins = np.array([75, # Proteines
@@ -35,7 +40,9 @@ besoins = np.array([75, # Proteines
                 45]) # Fibre
 
 
-# Résolution du problème d'optimisation
+"""
+Résolution du problème
+"""
 Result = so.linprog(prix, A_ub = -valeur_nutri, b_ub = -besoins, method = 'highs')
 
 
@@ -75,7 +82,10 @@ apports_obtenus = valeur_nutri @ Result.x  # produit matriciel
 pourcentages = apports_obtenus / besoins * 100
 
 
-# Création d'un tableau résumé avec pandas
+
+"""
+Tableau des résultats
+"""
 nutriments = ['Protéines', 'Lipides', 'Glucides', 'Calories', 'Fer', 'Calcium', 'Fibres']
 
 df_resultats = pd.DataFrame({
@@ -89,13 +99,17 @@ df_resultats = pd.DataFrame({
 
 ## Affichage des résultats____________________________________________________________________________________________________________________
 
-# Affichage basique des résultats
+"""
+Affichage du coup
+"""
 print("")
 print( "Cout : ", Result.fun)
 print("")
 
 
-# Affichage avancé des résultats
+"""
+Affichage des aliments
+"""
 u = np.where(Result.x > 0)[0]  # Qté opti sup à 0
 
 for k in u:
@@ -104,7 +118,11 @@ for k in u:
 
 def rename_aliment(name):
     return name.replace("–", "-").strip()
-# Affichage du tableau
+
+
+"""
+Affichage du résumé nutritionnel
+"""
 print("\nRésumé nutritionnel :")
 print(df_resultats.to_string(index=False))
 

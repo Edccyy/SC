@@ -14,15 +14,6 @@ class besoins(object):
         self.fibres:int = fibres*jours
         self.jours:int = jours
 
-    def __eq__(self, autre):
-        return self.nom == autre.nom
-    
-    def __super__(self, autre):
-        return self.nom > autre.nom
-    
-    def __sub__(self, autre):
-        return self.nom < autre.nom
-
     def __hash__(self):
         return hash(self.nom)
     
