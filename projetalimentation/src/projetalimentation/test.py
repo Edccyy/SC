@@ -130,6 +130,29 @@ print(df_resultats.to_string(index=False))
 
 
 
+# Possibilité de mettre des besoins personnalisés
+
+
+def ajouter_besoin(besoins):
+    """
+    Ajoute un nouvel aliment au DataFrame Al.
+    """
+    nouveaux_besoins = [
+        besoins.proteines,
+        besoins.lipides,
+        besoins.glucides,
+        besoins.calories,
+        besoins.fer,
+        besoins.calcium,
+        besoins.fibres,
+        besoins.jours
+    ]
+    print(f"Les besoins journalier sont  '{besoins.proteines}' g de protéines, {besoins.lipides}' g de lipides, '{besoins.glucides}' g de glucides, '{besoins.calories}' calories, '{besoins.fer}' mg de fer, '{besoins.calcium}' mg de calcium, '{besoins.fibres}' g de fibres pour {besoins.jours} jours.")
+
+
+
+
+
 # Possibilité de rajouter des aliments en utilisant la classe Aliment
 
 
