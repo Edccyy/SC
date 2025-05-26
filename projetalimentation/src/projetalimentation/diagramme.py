@@ -20,10 +20,11 @@ besoins_base = {
     "Fibre": besoins[6]
 }
 
+
+
 """
 Apport obtenue par le programme
 """
-
 besoins_repondu = {
     "Protéines" : apports_obtenus[0],
     "Lipides": apports_obtenus[1],
