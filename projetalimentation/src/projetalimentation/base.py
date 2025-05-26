@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.optimize as so
 from IPython.display import display
-from __init__ import *
+from __class__ import *
 
 
 
@@ -125,50 +125,3 @@ Affichage du résumé nutritionnel
 """
 print("\nRésumé nutritionnel :")
 print(df_resultats.to_string(index=False))
-
-
-
-
-
-# Possibilité de mettre des besoins personnalisés
-
-
-def ajouter_besoin(besoins):
-    """
-    Ajoute de nouveaux besoins
-    """
-    nouveaux_besoins = [
-        besoins.proteines,
-        besoins.lipides,
-        besoins.glucides,
-        besoins.calories,
-        besoins.fer,
-        besoins.calcium,
-        besoins.fibres,
-        besoins.jours
-    ]
-    print(f"Les besoins journalier sont  '{besoins.proteines}' g de protéines, {besoins.lipides}' g de lipides, '{besoins.glucides}' g de glucides, '{besoins.calories}' calories, '{besoins.fer}' mg de fer, '{besoins.calcium}' mg de calcium, '{besoins.fibres}' g de fibres pour {besoins.jours} jours.")
-
-
-
-
-
-# Possibilité de rajouter des aliments en utilisant la classe Aliment
-
-
-def ajouter_aliment(aliment):
-    """
-    Ajoute un nouvel aliment au DataFrame Al.
-    """
-    nouvelle_ligne = [
-        aliment.proteines,
-        aliment.lipides,
-        aliment.glucides,
-        aliment.calories,
-        aliment.fer,
-        aliment.calcium,
-        aliment.fibres,
-        aliment.prix
-    ]
-    Al.loc[aliment.nom] = nouvelle_ligne
-    print(f"Aliment '{aliment.nom}' ajouté avec succès.")
