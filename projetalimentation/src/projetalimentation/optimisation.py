@@ -10,6 +10,9 @@ from data import Al, A
 
 
 def optimisation():
+    """
+    Optimisation de l'alimentation en fonction des besoins nutritionnels en minimisant le coût
+    """
 
     valeur_nutri = A[:-1]
     prix = A[-1] 
