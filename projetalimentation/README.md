@@ -7,7 +7,11 @@ Dans le dossier scr :
     - aliment.py : Fonction pour ajouter un aliment à la base de données
     - besoins.py : Fonction pour rentrer ses propres besoins
     - diagramme.py : Diagramme de Kiviat  des besoins nutritionnels et des apports obtenus
+
     - main.py
+
+    - data.py : lecture de la base de donnée
+    - optimisation.py : Fonction d'optimisation des aliments en focntion des besoins et du coût
 
 Dans le dossier test :
 
