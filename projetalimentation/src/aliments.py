@@ -4,23 +4,23 @@ import matplotlib.pyplot as plt
 import scipy.optimize as so
 from IPython.display import display
 from __class__ import *
-from projetalimentation.base import Al
+from base import Al
 
-def ajouter_aliment(aliment):
+
+def ajouter_aliment(Aliment: aliment) -> aliment :
     """
-    Ajoute un nouvel aliment au DataFrame Al.
+    Ajoute un nouvel aliment à la base de données.
+    Affiche un message de succès si l'aliment est ajouté avec succès.
     """
-    nouvelle_ligne = [
-        aliment.proteines,
-        aliment.lipides,
-        aliment.glucides,
-        aliment.calories,
-        aliment.fer,
-        aliment.calcium,
-        aliment.fibres,
-        aliment.prix
-    ]
-    Al.loc[aliment.nom] = nouvelle_ligne
-    print(f"Aliment '{aliment.nom}' ajouté avec succès.")
-
-
+    nouvelle_ligne = pd.Series({
+        'proteines': Aliment.proteines,
+        'lipides': Aliment.lipides,
+        'glucides': Aliment.glucides,
+        'calories': Aliment.calories,
+        'fer': Aliment.fer,
+        'calcium': Aliment.calcium,
+        'fibres': Aliment.fibres,
+        'prix': Aliment.prix
+    })
+    Al.loc[Aliment.nom] = nouvelle_ligne
+    print(f"✅ Aliment '{Aliment.nom}' ajouté avec succès.")
