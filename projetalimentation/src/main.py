@@ -2,6 +2,7 @@ from data import Al, A
 from aliments import ajouter_aliment
 from besoins import ajouter_besoins
 from __class__ import *
+from optimisation import optimisation
 
 def run():
     
@@ -76,9 +77,9 @@ def run():
             Menu = 0
         elif(Menu == 3):
             if resultatValide == False:
-                optimisation(B_besoins)
+                optimisation(O_besoins = B_besoins)
             else:
-                optimisation(N_besoins)
+                optimisation(O_beoins = N_besoins)
             print("Merci d'avoir utilisé le programme !")
         elif(Menu == 4):
             print("Merci d'avoir utilisé le programme !")
