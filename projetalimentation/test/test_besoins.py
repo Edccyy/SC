@@ -21,11 +21,11 @@ def test_nouveau_besoin() -> besoins:
     N_besoin = ajouter_besoins(besoins(proteines, lipides, glucides, calories, fer, calcium, fibres, jours))
 
     # Vérifications (adapte selon la structure retournée)
-    assert N_besoin.proteines == proteines
-    assert N_besoin.lipides == lipides
-    assert N_besoin.glucides == glucides
-    assert N_besoin.calories == calories
-    assert N_besoin.fer == fer
-    assert N_besoin.calcium == calcium
-    assert N_besoin.fibres == fibres
+    assert N_besoin.proteines == proteines*jours
+    assert N_besoin.lipides == lipides*jours
+    assert N_besoin.glucides == glucides*jours
+    assert N_besoin.calories == calories*jours
+    assert N_besoin.fer == fer*jours
+    assert N_besoin.calcium == calcium*jours
+    assert N_besoin.fibres == fibres*jours
     assert N_besoin.jours == jours
