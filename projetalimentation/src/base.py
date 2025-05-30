@@ -32,23 +32,23 @@ Result = so.linprog(prix, A_ub = -valeur_nutri, b_ub = -O_besoins, method = 'hig
 
 ## 2)  Les 10%___________________________________________________________________________________________________________________
 A_ub = -valeur_nutri
-b_ub = -besoins
+b_ub = -O_besoins
 A_ub2 = valeur_nutri
-b_ub2 = 1.1 * besoins
+b_ub2 = 1.1 * O_besoins
 
 A_total = np.vstack((A_ub, A_ub2))
 b_total = np.hstack((b_ub, b_ub2))
 
-Result = so.linprog(prix, A_ub = -valeur_nutri, b_ub = -besoins, method = 'highs')
+Result = so.linprog(prix, A_ub = -valeur_nutri, b_ub = -O_besoins, method = 'highs')
 
 
 # Limite supérieure : 110 % des besoins
 A_ub_inf = -valeur_nutri            # ≥ besoins <=> -valeurs ≤ -besoins
-b_ub_inf = -besoins
+b_ub_inf = -O_besoins
 
 # Limite supérieure : ≤ 110% des besoins
 A_ub_sup = valeur_nutri
-b_ub_sup = 1.1 * besoins
+b_ub_sup = 1.1 * O_besoins
 
 # Contrainte combinée
 A_total = np.vstack((A_ub_inf, A_ub_sup))
@@ -60,7 +60,7 @@ Result = so.linprog(prix, A_ub=A_total, b_ub=b_total, method='highs')
 
 # Vérification des apports réels
 apports_obtenus = valeur_nutri @ Result.x  # produit matriciel
-pourcentages = apports_obtenus / besoins * 100
+pourcentages = apports_obtenus / O_besoins * 100
 
 
 
@@ -71,7 +71,7 @@ nutriments = ['Protéines', 'Lipides', 'Glucides', 'Calories', 'Fer', 'Calcium',
 
 df_resultats = pd.DataFrame({
     'Nutriment': nutriments,
-    'Besoins': besoins,
+    'Besoins': O_besoins,
     'Apport obtenu': apports_obtenus,
     '% des besoins': pourcentages})
 
