@@ -7,7 +7,7 @@ from IPython.display import display
 from __class__ import *
 from data import Al
 
-def ajouter_aliment(aliment):
+def ajouter_aliment(aliment : aliment) :
     """
     Ajoute un nouvel aliment au DataFrame Al.
     """

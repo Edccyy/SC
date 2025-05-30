@@ -6,7 +6,7 @@ from IPython.display import display
 
 from __class__ import *
 
-def ajouter_besoin(besoins):
+def ajouter_besoin(besoins : besoins) -> besoins:
     """
     Ajoute de nouveaux besoins
     """
