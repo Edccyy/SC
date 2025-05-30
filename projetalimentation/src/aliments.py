@@ -3,8 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.optimize as so
 from IPython.display import display
+
 from __class__ import *
-from projetalimentation.base import Al
+from data import Al
 
 def ajouter_aliment(aliment):
     """

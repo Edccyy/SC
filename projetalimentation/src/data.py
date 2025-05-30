@@ -3,6 +3,7 @@ import pandas as pd
 import scipy.optimize as so
 import matplotlib.pyplot as plt
 from IPython.display import display
+
 from __class__ import *
 
 """
@@ -15,3 +16,17 @@ Al = pd.read_csv(
 
 Al.iloc[[10*k for k in range(5)],:]
 A = np.array(Al).T
+
+
+
+"""
+Besoin de base
+"""
+
+O_besoins = np.array([75, # Proteines
+                90, # Lipides
+                225, # Glucides
+                2000, # Calories
+                9, # Fer
+                800, # Calcium 
+                45])# Fibre

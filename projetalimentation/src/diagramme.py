@@ -4,20 +4,21 @@ import matplotlib.pyplot as plt
 """ 
 Importation des besoins nutritionnels et des apports obtenus 
 """
-from base import besoins, apports_obtenus
-
+from base import apports_obtenus
+from data import O_besoins
+from __class__ import *
 
 """
 Besoins nutritionnels de base
 """
 besoins_base = {
-    "Protéines" : besoins[0],
-    "Lipides": besoins[1],
-    "Glucides": besoins[2],
-    "Calories": besoins[3],
-    "Fer": besoins[4],
-    "Calcium": besoins[5],
-    "Fibre": besoins[6]
+    "Protéines" : O_besoins[0],
+    "Lipides": O_besoins[1],
+    "Glucides": O_besoins[2],
+    "Calories": O_besoins[3],
+    "Fer": O_besoins[4],
+    "Calcium": O_besoins[5],
+    "Fibre": O_besoins[6]
 }
 
 

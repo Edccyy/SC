@@ -3,11 +3,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.optimize as so
 from IPython.display import display
-from __class__ import *
 
-
+from data import O_besoins, Al, A
 
 np.set_printoptions(precision=1, suppress=True)
+
 
 
 
@@ -15,35 +15,16 @@ np.set_printoptions(precision=1, suppress=True)
 ## 1)  Le problème de base___________________________________________________________________________________________________________________
 
 """
-Importation des données
-"""
-Al = pd.read_csv(
-                'C:/Cours/Supply Chain/SC/projetalimentation/data/Aliments.csv', 
-                sep=';', 
-                index_col=0)
-
-Al.iloc[[10*k for k in range(5)],:]
-A = np.array(Al).T
-
-
-"""
 Création des Besoins
 """
 valeur_nutri = A[:-1]
-prix = A[-1]  # Prix
-besoins = np.array([75, # Proteines
-                90, # Lipides
-                225, # Glucides
-                2000, # Calories
-                9, # Fer
-                800, # Calcium 
-                45]) # Fibre
+prix = A[-1] 
 
 
 """
 Résolution du problème
 """
-Result = so.linprog(prix, A_ub = -valeur_nutri, b_ub = -besoins, method = 'highs')
+Result = so.linprog(prix, A_ub = -valeur_nutri, b_ub = -O_besoins, method = 'highs')
 
 
 
