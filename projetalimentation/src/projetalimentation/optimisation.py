@@ -9,7 +9,7 @@ from data import Al, A
 
 
 
-def optimisation():
+def optimisation() -> resultat:
     """
     Optimisation de l'alimentation en fonction des besoins nutritionnels en minimisant le coût
     """
