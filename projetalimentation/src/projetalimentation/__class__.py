@@ -3,7 +3,7 @@ from graphlib import *
 
 class besoins(object):
 
-    def __init__(self, proteines:int, lipides:int, glucides:int, calories:int, fer:int, calcium, fibres:int, jours:int, marge:int = 0):
+    def __init__(self, proteines:int, lipides:int, glucides:int, calories:int, fer:int, calcium, fibres:int, jours:int = 1, marge:int = 0):
         
         self.proteines:int = proteines*jours
         self.lipides:int = lipides*jours

@@ -77,9 +77,9 @@ def run():
             Menu = 0
         elif(Menu == 3):
             if resultatValide == False:
-                optimisation(O_besoins = B_besoins)
+                optimisation()
             else:
-                optimisation(O_beoins = N_besoins)
+                optimisation(N_besoins)
             print("Merci d'avoir utilisé le programme !")
         elif(Menu == 4):
             print("Merci d'avoir utilisé le programme !")

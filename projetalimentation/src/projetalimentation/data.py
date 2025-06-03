@@ -1,7 +1,5 @@
 import numpy as np
 import pandas as pd
-import scipy.optimize as so
-import matplotlib.pyplot as plt
 from IPython.display import display
 
 from __class__ import *
