@@ -2,7 +2,7 @@ import numpy as np
 import scipy.optimize as so
 from IPython.display import display
 
-from __class__ import *
+from ilfautunnom import *
 from data import  A, O_besoins
 
 

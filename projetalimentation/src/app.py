@@ -1,7 +1,7 @@
-from data import Al, A
+from data import *
 from aliments import ajouter_aliment
-from besoins import ajouter_besoin
-from __class__ import *
+from besoins import ajouter_besoins
+from ilfautunnom import *
 from optimisation import optimisation
 
 def run():
@@ -45,7 +45,7 @@ def run():
                     print("Les besoins doivent être positifs et le nombre de jours doit être supérieur à 0 !\n")
                     resultatValide = False
                 else:
-                    ajouter_besoin(besoins(P, L, G, C, F, Ca, Fi, J))
+                    ajouter_besoins(besoins(P, L, G, C, F, Ca, Fi, J))
                     resultatValide = True
             Menu = 0
         elif(Menu == 2):

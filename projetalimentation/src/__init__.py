@@ -1,4 +1,4 @@
-__all__ = ["app","__class__", "base", "besoins", "aliments", "optimisation", "diagramme"]
+__all__ = ["app","ilfautunnom", "data", "besoins", "aliments", "optimisation", "diagramme"]
 
 
 def main() -> None:

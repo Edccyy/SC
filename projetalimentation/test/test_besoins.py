@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../s
 
 from besoins import ajouter_besoins
 from data import Al
-from __class__ import *
+from ilfautunnom import *
 
 def test_nouveau_besoin() -> besoins:
     proteines = 50

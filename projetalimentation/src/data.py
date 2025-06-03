@@ -2,13 +2,13 @@ import numpy as np
 import pandas as pd
 from IPython.display import display
 
-from __class__ import *
+from ilfautunnom import *
 
 """
 Importation des données
 """
 Al = pd.read_csv(
-                'C:/Cours/Supply Chain/SC/projetalimentation/data/Aliments.csv', 
+                'C:/Cours/Supply Chain/SC/projetalimentation/données/Aliments.csv', 
                 sep=';', 
                 index_col=0)
 

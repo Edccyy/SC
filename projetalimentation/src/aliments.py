@@ -1,6 +1,6 @@
 from IPython.display import display
 
-from __class__ import *
+from ilfautunnom import *
 from data import Al
 
 def ajouter_aliment(aliment : aliment) :

@@ -6,7 +6,7 @@ Importation des besoins nutritionnels et des apports obtenus
 """
 from base import apports_obtenus
 from data import O_besoins
-from __class__ import *
+from ilfautunnom import *
 
 """
 Besoins nutritionnels de base

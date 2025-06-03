@@ -1,8 +1,8 @@
 from IPython.display import display
 
-from __class__ import *
+from ilfautunnom import *
 
-def ajouter_besoin(besoins : besoins) -> besoins:
+def ajouter_besoins(besoins : besoins) -> besoins:
     """
     Ajoute de nouveaux besoins
     """
