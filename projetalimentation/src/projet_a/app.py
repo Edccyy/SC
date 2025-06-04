@@ -53,26 +53,28 @@ def run():
             resultatValide2 = False
             while(not resultatValide2):
                 print("Rentrez le besoins en proteine : ")
-                P = int(input())
+                P1 = int(input())
                 print("Rentrez le besoins en lipides : ")
-                L = int(input())
+                L1 = int(input())
                 print("Rentrez le besoins en glucide : ")
-                G = int(input())
+                G1 = int(input())
                 print("Rentrez le besoins en calories : ")
-                C = int(input())
+                C1 = int(input())
                 print("Rentrez le besoins en fer : ")
-                F = int(input())
+                F1 = int(input())
                 print("Rentrez le besoins en calcium : ")
-                Ca = int(input())
+                Ca1 = int(input())
                 print("Rentrez le besoins en fibres : ")
-                Fi = int(input())
+                Fi1 = int(input())
+                print("Rentrez le prix de l'aliment : ")
+                Pr1 = int(input())
                 print("Rentrez le nom de l'aliment : ")
                 N = int(input())
-                if(P < 0 or L < 0 or G < 0 or C < 0 or F < 0 or Ca < 0 or Fi < 0):
-                    print("Les besoins doivent être positifs et le nombre de jours doit être supérieur à 0 !\n")
+                if(P1 < 0 or L1 < 0 or G1 < 0 or C1 < 0 or F1 < 0 or Ca1 < 0 or Fi1 < 0 or Pr1 <= 0):
+                    print("Les besoins doivent être positifs et le prix doit être supérieur à 0 !\n")
                     resultatValide = False
                 else:
-                    ajouter_aliment(aliment(N,P, L, G, C, F, Ca, Fi))
+                    ajouter_aliment(aliment(N,P1, L1, G1, C1, F1, Ca1, Fi1, Pr1))
                     resultatValide2 = True
             Menu = 0
         elif(Menu == 3):
