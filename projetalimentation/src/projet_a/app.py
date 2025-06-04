@@ -1,8 +1,8 @@
-from data import *
-from aliments import ajouter_aliment
-from besoins import ajouter_besoins
-from ilfautunnom import *
-from optimisation import optimisation
+from src.projet_a.data import *
+from src.projet_a.aliments import ajouter_aliment
+from src.projet_a.besoins import ajouter_besoins
+from src.projet_a.ilfautunnom import *
+from src.projet_a.optimisation import optimisation
 
 def run():
     
@@ -26,19 +26,19 @@ def run():
             resultatValide = False
             while(not resultatValide):
                 print("Rentrez le besoins en proteine : ")
-                P = int(input())
+                P = float(input())
                 print("Rentrez le besoins en lipides : ")
-                L = int(input())
+                L = float(input())
                 print("Rentrez le besoins en glucide : ")
-                G = int(input())
+                G = float(input())
                 print("Rentrez le besoins en calories : ")
-                C = int(input())
+                C = float(input())
                 print("Rentrez le besoins en fer : ")
-                F = int(input())
+                F = float(input())
                 print("Rentrez le besoins en calcium : ")
-                Ca = int(input())
+                Ca = float(input())
                 print("Rentrez le besoins en fibres : ")
-                Fi = int(input())
+                Fi = float(input())
                 print("Rentrez le nombre de jours : ")
                 J = int(input())
                 if(P < 0 or L < 0 or G < 0 or C < 0 or F < 0 or Ca < 0 or Fi < 0 or J <= 0):
@@ -53,23 +53,23 @@ def run():
             resultatValide2 = False
             while(not resultatValide2):
                 print("Rentrez le besoins en proteine : ")
-                P1 = int(input())
+                P1 = float(input())
                 print("Rentrez le besoins en lipides : ")
-                L1 = int(input())
+                L1 = float(input())
                 print("Rentrez le besoins en glucide : ")
-                G1 = int(input())
+                G1 = float(input())
                 print("Rentrez le besoins en calories : ")
-                C1 = int(input())
+                C1 = float(input())
                 print("Rentrez le besoins en fer : ")
-                F1 = int(input())
+                F1 = float(input())
                 print("Rentrez le besoins en calcium : ")
-                Ca1 = int(input())
+                Ca1 = float(input())
                 print("Rentrez le besoins en fibres : ")
-                Fi1 = int(input())
+                Fi1 = float(input())
                 print("Rentrez le prix de l'aliment : ")
-                Pr1 = int(input())
+                Pr1 = float(input())
                 print("Rentrez le nom de l'aliment : ")
-                N = int(input())
+                N = str(input())
                 if(P1 < 0 or L1 < 0 or G1 < 0 or C1 < 0 or F1 < 0 or Ca1 < 0 or Fi1 < 0 or Pr1 <= 0):
                     print("Les besoins doivent être positifs et le prix doit être supérieur à 0 !\n")
                     resultatValide = False

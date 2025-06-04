@@ -1,12 +1,12 @@
 from IPython.display import display
 
-from ilfautunnom import *
+from src.projet_a.ilfautunnom import *
 
 def ajouter_besoins(besoins : besoins) -> besoins:
     """
     Ajoute de nouveaux besoins
     """
-    nouveaux_besoins = [
+    N_besoins = [
         besoins.proteines,
         besoins.lipides,
         besoins.glucides,

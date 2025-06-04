@@ -2,8 +2,8 @@ import numpy as np
 import scipy.optimize as so
 from IPython.display import display
 
-from ilfautunnom import *
-from data import  A, O_besoins
+from src.projet_a.ilfautunnom import *
+from src.projet_a.data import  A, O_besoins
 
 
 

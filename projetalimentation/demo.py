@@ -1,4 +1,4 @@
-from projet_a import *
-# Make sure 'app' is imported or defined; for example, if using Flask:
+from src.projet_a import *
 
+#data.save()
 app.run()

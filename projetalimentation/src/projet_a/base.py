@@ -3,7 +3,7 @@ import numpy as np
 import scipy.optimize as so
 from IPython.display import display
 
-from data import O_besoins, Al, A
+from src.projet_a.data import O_besoins, Al, A
 
 np.set_printoptions(precision=1, suppress=True)
 
