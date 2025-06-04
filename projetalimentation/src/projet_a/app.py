@@ -1,12 +1,13 @@
 from src.projet_a.data import *
 from src.projet_a.aliments import ajouter_aliment
-from src.projet_a.besoins import ajouter_besoins
+from src.projet_a.besoins import ajouter_besoins, N_besoins
 from src.projet_a.ilfautunnom import *
 from src.projet_a.optimisation import optimisation
 
 def run():
     
     Menu = 0
+    besoins_saisie = False
     while(True):
         if(Menu == 0):
             print("Que voulez-vous faire ?")
@@ -47,6 +48,7 @@ def run():
                 else:
                     ajouter_besoins(besoins(P, L, G, C, F, Ca, Fi, J))
                     resultatValide = True
+                    besoins_saisie = True
             Menu = 0
         elif(Menu == 2):
             result = ""
@@ -78,11 +80,13 @@ def run():
                     resultatValide2 = True
             Menu = 0
         elif(Menu == 3):
-            if resultatValide == False:
-                optimisation()
+            if besoins_saisie == False:
+                optimisation(O_besoins)
             else:
                 optimisation(N_besoins)
             print("Merci d'avoir utilisé le programme !")
+            break
         elif(Menu == 4):
             print("Merci d'avoir utilisé le programme !")
             break
+        

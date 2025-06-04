@@ -3,15 +3,15 @@ from graphlib import *
 
 class besoins(object):
 
-    def __init__(self, proteines:int, lipides:int, glucides:int, calories:int, fer:int, calcium, fibres:int, jours:int = 1, marge:int = 0):
+    def __init__(self, proteines:float, lipides:float, glucides:float, calories:float, fer:float, calcium:float, fibres:float, jours:int = 1, marge:int = 0):
         
-        self.proteines:int = proteines*jours
-        self.lipides:int = lipides*jours
-        self.glucides:int = glucides*jours
-        self.calories:int = calories*jours
-        self.fer:int = fer*jours
-        self.calcium:int = calcium*jours
-        self.fibres:int = fibres*jours
+        self.proteines:float = proteines*jours
+        self.lipides:float = lipides*jours
+        self.glucides:float = glucides*jours
+        self.calories:float = calories*jours
+        self.fer:float = fer*jours
+        self.calcium:float = calcium*jours
+        self.fibres:float = fibres*jours
         self.jours:int = jours
         self.marge:int = marge
         if marge < 0:
@@ -26,16 +26,16 @@ class besoins(object):
 
 class aliment(object):
 
-    def __init__(self, nom:str, proteines:int, lipides:int, glucides:int, calories:int, fer:int, calcium, fibres:int, prix:int):
+    def __init__(self, nom:str, proteines:float, lipides:float, glucides:float, calories:float, fer:float, calcium, fibres:float, prix:float):
         self.nom :str = nom
-        self.proteines:int = proteines
-        self.lipides:int = lipides
-        self.glucides:int = glucides
-        self.calories:int = calories
-        self.fer:int = fer
-        self.calcium:int = calcium
-        self.fibres:int = fibres
-        self.prix:int = prix
+        self.proteines:float = proteines
+        self.lipides:float = lipides
+        self.glucides:float = glucides
+        self.calories:float = calories
+        self.fer:float = fer
+        self.calcium:float = calcium
+        self.fibres:float = fibres
+        self.prix:float = prix
 
 
 class resultat(object):
