@@ -4,7 +4,7 @@ import scipy.optimize as so
 from IPython.display import display
 
 from src.projet_a.ilfautunnom import *
-from src.projet_a.data import  Al, A, O_besoins
+from src.projet_a.data import  Al, O_besoins
 
 
 
@@ -24,6 +24,7 @@ def optimisation(nouveau_besoins : besoins ) -> resultat:
             nouveau_besoins.calcium,
             nouveau_besoins.fibres
         ])
+    A = np.array(Al).T
     valeur_nutri = A[:-1]
     prix = A[-1] 
     print(besoins_opti)

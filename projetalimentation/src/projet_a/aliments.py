@@ -7,6 +7,7 @@ def ajouter_aliment(aliment : aliment) :
     """
     Ajoute un nouvel aliment au DataFrame Al.
     """
+    global Al
     nouvelle_ligne = [
         aliment.proteines,
         aliment.lipides,

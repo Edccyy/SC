@@ -3,7 +3,7 @@ import numpy as np
 import scipy.optimize as so
 from IPython.display import display
 
-from src.projet_a.data import O_besoins, Al, A
+from src.projet_a.data import O_besoins, Al
 
 np.set_printoptions(precision=1, suppress=True)
 
@@ -16,6 +16,8 @@ np.set_printoptions(precision=1, suppress=True)
 """
 Création des Besoins
 """
+
+A = np.array(Al).T
 valeur_nutri = A[:-1]
 prix = A[-1] 
 

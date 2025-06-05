@@ -13,14 +13,12 @@ Al = pd.read_csv(
                 index_col=0)
 
 Al.iloc[[10*k for k in range(5)],:]
-A = np.array(Al).T
 
 
 
 """
 Besoin de base
 """
-
 O_besoins = np.array([75, # Proteines
                 90, # Lipides
                 225, # Glucides
