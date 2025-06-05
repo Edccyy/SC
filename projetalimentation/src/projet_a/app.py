@@ -9,7 +9,8 @@ def run():
     
     Menu = 0
     besoins_saisie = False
-    
+    N_besoins = besoins(O_besoins[0], O_besoins[1], O_besoins[2], O_besoins[3], O_besoins[4], O_besoins[5], O_besoins[6])
+
     while(True):
         if(Menu == 0):
             print("Que voulez-vous faire ?")
@@ -84,7 +85,7 @@ def run():
             Menu = 0
         elif(Menu == 3):
             if besoins_saisie == False:
-                optimisation(O_besoins)
+                optimisation(N_besoins)
             else:
                 optimisation(N_besoins)
             print("Merci d'avoir utilisé le programme !")
