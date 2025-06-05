@@ -8,7 +8,7 @@ from src.projet_a.data import  Al, O_besoins
 
 
 
-def optimisation(nouveau_besoins : besoins ) -> resultat:
+def optimisation(nouveau_besoins : besoins ) -> besoins:
     """
     Optimisation de l'alimentation en fonction des besoins nutritionnels en minimisant le coût
     """
@@ -75,3 +75,5 @@ def optimisation(nouveau_besoins : besoins ) -> resultat:
     """
     print("\nRésumé nutritionnel :")
     print(df_resultats.to_string(index=False))
+
+    return apports_obtenus

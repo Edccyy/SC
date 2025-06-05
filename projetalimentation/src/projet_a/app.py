@@ -2,7 +2,8 @@ from src.projet_a.data import *
 from src.projet_a.aliments import ajouter_aliment
 from src.projet_a.besoins import ajouter_besoins
 from src.projet_a.ilfautunnom import *
-from src.projet_a.optimisation import optimisation
+from src.projet_a.optimisation import *
+from src.projet_a.Diagramme2   import *
 
 
 def run():
@@ -10,6 +11,7 @@ def run():
     Menu = 0
     besoins_saisie = False
     N_besoins = besoins(O_besoins[0], O_besoins[1], O_besoins[2], O_besoins[3], O_besoins[4], O_besoins[5], O_besoins[6])
+    apports_obtenus = besoins(0,0,0,0,0,0,1)# Initialisation des apports obtenus
 
     while(True):
         if(Menu == 0):
@@ -84,13 +86,15 @@ def run():
                     resultatValide2 = True
             Menu = 0
         elif(Menu == 3):
-            if besoins_saisie == False:
-                optimisation(N_besoins)
-            else:
-                optimisation(N_besoins)
+            optimisation(N_besoins)
+            afficher_kiviat = input("Voulez-vous afficher le diagramme de Kiviat ? (o/n) : ").strip().lower()
+            if afficher_kiviat == "o":
+                if besoins_saisie == False:
+                    plot_kiviat(N_besoins, apports_obtenus, "Diagramme de Kiviat des besoins de base")
+                else:
+                    plot_kiviat(N_besoins, apports_obtenus, "Diagramme de Kiviat des besoins répondus")
             print("Merci d'avoir utilisé le programme !")
             break
         elif(Menu == 4):
             print("Merci d'avoir utilisé le programme !")
             break
-        

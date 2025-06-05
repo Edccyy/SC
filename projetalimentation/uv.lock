@@ -406,6 +406,7 @@ dependencies = [
     { name = "matplotlib" },
     { name = "pandas" },
     { name = "scipy" },
+    { name = "tcl" },
 ]
 
 [package.metadata]
@@ -414,6 +415,7 @@ requires-dist = [
     { name = "matplotlib", specifier = ">=3.10.1" },
     { name = "pandas", specifier = ">=2.2.3" },
     { name = "scipy", specifier = ">=1.15.2" },
+    { name = "tcl", specifier = ">=0.2" },
 ]
 
 [[package]]
@@ -544,6 +546,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/28/e3/55dcc2cfbc3ca9c29519eb6884dd1415ecb53b0e934862d3559ddcb7e20b/stack_data-0.6.3.tar.gz", hash = "sha256:836a778de4fec4dcd1dcd89ed8abff8a221f58308462e1c4aa2a3cf30148f0b9", size = 44707 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/f1/7b/ce1eafaf1a76852e2ec9b22edecf1daa58175c090266e9f6c64afcd81d91/stack_data-0.6.3-py3-none-any.whl", hash = "sha256:d5558e0c25a4cb0853cddad3d77da9891a08cb85dd9f9f91b9f8cd66e511e695", size = 24521 },
+]
+
+[[package]]
+name = "tcl"
+version = "0.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ba/a8/5bc7924d0f23ee33c3ac62442af9cd1531712f5d4d086255b94d06be49fe/Tcl-0.2.tar.gz", hash = "sha256:395f69c382dedf29f88b6cce9114024528fce7f073d7b84eaefa9b608f3ea193", size = 1734 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/47/84/0ed099cffdb343655d95a887b298f046487ca70c22a0a7d0c99f513b320c/Tcl-0.2-py3-none-any.whl", hash = "sha256:482e8147ed4c07563a621ffa5be874574527a9d60f5c3e9917b1f4079c5b27e5", size = 2356 },
 ]
 
 [[package]]
