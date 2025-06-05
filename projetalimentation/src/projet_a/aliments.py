@@ -20,4 +20,4 @@ def ajouter_aliment(aliment : aliment) :
     Al.loc[aliment.nom] = nouvelle_ligne
     print(f"Aliment '{aliment.nom}' ajouté avec succès.")
 
-
+    print(Al)

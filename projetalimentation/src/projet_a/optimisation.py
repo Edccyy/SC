@@ -8,20 +8,30 @@ from src.projet_a.data import  Al, A, O_besoins
 
 
 
-def optimisation(nouveau_besoins ) -> resultat:
+def optimisation(nouveau_besoins : besoins ) -> resultat:
     """
     Optimisation de l'alimentation en fonction des besoins nutritionnels en minimisant le coût
     """
     if nouveau_besoins is None:
-        nouveau_besoins = O_besoins 
+        besoins_opti = O_besoins
+    else:
+        besoins_opti = np.array([
+            nouveau_besoins.proteines,
+            nouveau_besoins.lipides,
+            nouveau_besoins.glucides,
+            nouveau_besoins.calories,
+            nouveau_besoins.fer,
+            nouveau_besoins.calcium,
+            nouveau_besoins.fibres
+        ])
     valeur_nutri = A[:-1]
     prix = A[-1] 
-
-    Result = so.linprog(prix, A_ub = -valeur_nutri, b_ub = -nouveau_besoins, method = 'highs')
+    print(besoins_opti)
+    Result = so.linprog(prix, A_ub = -valeur_nutri, b_ub = -besoins_opti, method = 'highs')
 
         # Vérification des apports réels
     apports_obtenus = valeur_nutri @ Result.x  # produit matriciel
-    pourcentages = apports_obtenus / nouveau_besoins * 100
+    pourcentages = apports_obtenus / besoins_opti * 100
 
 
 
@@ -32,7 +42,7 @@ def optimisation(nouveau_besoins ) -> resultat:
 
     df_resultats = pd.DataFrame({
         'Nutriment': nutriments,
-        'Besoins': nouveau_besoins,
+        'Besoins': besoins_opti,
         'Apport obtenu': apports_obtenus,
         '% des besoins': pourcentages})
 

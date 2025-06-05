@@ -1,13 +1,15 @@
 from src.projet_a.data import *
 from src.projet_a.aliments import ajouter_aliment
-from src.projet_a.besoins import ajouter_besoins, N_besoins
+from src.projet_a.besoins import ajouter_besoins
 from src.projet_a.ilfautunnom import *
 from src.projet_a.optimisation import optimisation
+
 
 def run():
     
     Menu = 0
     besoins_saisie = False
+    
     while(True):
         if(Menu == 0):
             print("Que voulez-vous faire ?")
@@ -46,7 +48,8 @@ def run():
                     print("Les besoins doivent être positifs et le nombre de jours doit être supérieur à 0 !\n")
                     resultatValide = False
                 else:
-                    ajouter_besoins(besoins(P, L, G, C, F, Ca, Fi, J))
+                    N_besoins = besoins(P, L, G, C, F, Ca, Fi, J)
+                    ajouter_besoins(N_besoins)
                     resultatValide = True
                     besoins_saisie = True
             Menu = 0
@@ -72,7 +75,7 @@ def run():
                 Pr1 = float(input())
                 print("Rentrez le nom de l'aliment : ")
                 N = str(input())
-                if(P1 < 0 or L1 < 0 or G1 < 0 or C1 < 0 or F1 < 0 or Ca1 < 0 or Fi1 < 0 or Pr1 <= 0):
+                if(P1 < 0 or L1 < 0 or G1 < 0 or C1 < 0 or F1 < 0 or Ca1 < 0 or Fi1 < 0 or Pr1 < 0):
                     print("Les besoins doivent être positifs et le prix doit être supérieur à 0 !\n")
                     resultatValide = False
                 else:
