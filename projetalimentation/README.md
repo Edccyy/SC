@@ -2,6 +2,7 @@ Dans le dossier data :
     -Aliments.csv : Base de données de base
 
 Dans le dossier scr :
+
     - base.py : Code répondant à l'énoncer de base
     - __class__.py : Dossier de creation de classes
     - aliment.py : Fonction pour ajouter un aliment à la base de données
