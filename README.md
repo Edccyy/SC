@@ -1,6 +1,6 @@
-Dans le cadre du cours de Supply-Chain du master Mécen, il m'a était demander d'écrire un code permetant de répondre à cet énoncé :
+Dans le cadre du cours de Supply-Chain du master Mécen, il m'a été demandé d'écrire un code permetant de répondre à cet énoncé :
 
-Enoncer :
+Enoncé :
 
 **Sujet 02 : Régime Alimentaire**
 
@@ -23,8 +23,8 @@ On utilisera les données contenues dans le fichier Aliments.csv dans la suite.
 
 
 
-Une fois l'énoncé répondu il m'a était demander de généraliser autant que possible.
-Les pistes explorer pour le moment ont été :
+Une fois l'énoncé répondu il m'a été demandé de généraliser autant que possible.
+Les pistes explorées pour le moment ont été :
 
   - l'ajout d'aliment
   - la modification des besoins journaliés
