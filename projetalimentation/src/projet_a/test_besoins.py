@@ -1,12 +1,6 @@
-import sys
-import os
-import pytest
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
-
-from besoins import ajouter_besoins
-from data import Al
-from ilfautunnom import *
+from projet_a.besoins import ajouter_besoins
+from projet_a.data import Al
+from projet_a.ilfautunnom import *
 
 def test_nouveau_besoin() -> besoins:
     proteines = 50

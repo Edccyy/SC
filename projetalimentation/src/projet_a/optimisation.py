@@ -3,8 +3,8 @@ import pandas as pd
 import scipy.optimize as so
 from IPython.display import display
 
-from src.projet_a.ilfautunnom import *
-from src.projet_a.data import  Al, O_besoins
+from projet_a.ilfautunnom import *
+from projet_a.data import  Al, O_besoins
 
 
 

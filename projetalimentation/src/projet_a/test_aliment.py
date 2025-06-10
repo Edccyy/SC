@@ -1,12 +1,6 @@
-import sys
-import os
-import pytest
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
-
-from aliments import ajouter_aliment
-from data import Al
-from ilfautunnom import *
+from projet_a.aliments import ajouter_aliment
+from projet_a.data import Al
+from projet_a.ilfautunnom import *
 
 
 def test_nouveau_aliment() -> aliment :
