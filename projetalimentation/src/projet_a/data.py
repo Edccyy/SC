@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from IPython.display import display
 
-from projet_a.ilfautunnom import *
+from .ilfautunnom import *
 
 """
 Importation des données

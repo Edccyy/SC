@@ -1,10 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from projet_a.data import *
-from projet_a.aliments import ajouter_aliment
-from projet_a.besoins import ajouter_besoins
-from projet_a.ilfautunnom import *
-from projet_a.optimisation import optimisation
+from .data import *
+from .aliments import ajouter_aliment
+from .besoins import ajouter_besoins
+from .ilfautunnom import *
+from .optimisation import optimisation
 
 def plot_kiviat(N_besoins: besoins, apports_obtenus: besoins, titre: str = "Diagramme de Kiviat des besoins nutritionnels"):
 

@@ -1,7 +1,6 @@
-from projet_a.besoins import ajouter_besoins
-from projet_a.data import Al
-from projet_a.ilfautunnom import *
-
+from .besoins import ajouter_besoins
+from .data import Al
+from .ilfautunnom import *
 def test_nouveau_besoin() -> besoins:
     proteines = 50
     lipides = 70

@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 """ 
 Importation des besoins nutritionnels et des apports obtenus 
 """
-from projet_a.base import apports_obtenus
-from projet_a.data import O_besoins
-from projet_a.ilfautunnom import *
+from .base import apports_obtenus
+from .data import O_besoins
+from .ilfautunnom import *
 
 """
 Besoins nutritionnels de base

@@ -1,6 +1,6 @@
 from IPython.display import display
 
-from projet_a.ilfautunnom import *
+from .ilfautunnom import *
 
 
 def ajouter_besoins(T_besoins : besoins) -> besoins:

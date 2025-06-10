@@ -1,9 +1,9 @@
-from projet_a.data import *
-from projet_a.aliments import ajouter_aliment
-from projet_a.besoins import ajouter_besoins
-from projet_a.ilfautunnom import *
-from projet_a.optimisation import *
-from projet_a.Diagramme2   import *
+from .data import *
+from .aliments import ajouter_aliment
+from .besoins import ajouter_besoins
+from .ilfautunnom import *
+from .optimisation import *
+from .Diagramme2   import *
 
 
 def run():

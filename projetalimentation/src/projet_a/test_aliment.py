@@ -1,6 +1,6 @@
-from projet_a.aliments import ajouter_aliment
-from projet_a.data import Al
-from projet_a.ilfautunnom import *
+from .aliments import ajouter_aliment
+from .data import Al
+from .ilfautunnom import *
 
 
 def test_nouveau_aliment() -> aliment :

@@ -1,7 +1,7 @@
 from IPython.display import display
 
-from projet_a.ilfautunnom import *
-from projet_a.data import Al
+from .ilfautunnom import *
+from .data import Al
 
 def ajouter_aliment(aliment : aliment) :
     """
@@ -22,3 +22,5 @@ def ajouter_aliment(aliment : aliment) :
     print(f"Aliment '{aliment.nom}' ajouté avec succès.")
 
     print(Al)
+
+    return(aliment)
