@@ -2,8 +2,22 @@ from .aliments import ajouter_aliment
 from .data import Al
 from .ilfautunnom import *
 
+"""
+Ce fichier contient la fonction `test_nouveau_aliment`.
+"""
 
 def test_nouveau_aliment() -> aliment :
+    """
+    Teste l'ajout d'un nouvel aliment.
+    Crée un aliment avec des valeurs prédéfinies et vérifie que l'ajout fonctionne correctement.
+    Vérifie que l'objet retourné est bien un objet de type `aliment`.
+    Si l'aliment existe déjà, il sera mis à jour avec les nouvelles valeurs.
+    Si l'aliment n'existe pas, il sera ajouté à la liste des aliments.
+    A la moindre erreur, une exception sera levée.
+
+    Args:
+        aliment (aliment): Un objet de type aliment contenant les informations nutritionnelles et le prix de l'aliment.
+    """
     nom = "TestAliment"
     proteines = 10
     lipides = 5

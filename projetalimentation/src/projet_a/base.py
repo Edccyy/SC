@@ -7,7 +7,9 @@ from src.projet_a.data import O_besoins, Al
 
 np.set_printoptions(precision=1, suppress=True)
 
-
+"""
+Ce fichier contient le code de base pour résoudre un problème d'optimisation nutritionnelle.
+"""
 
 
 

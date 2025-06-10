@@ -3,9 +3,20 @@ from IPython.display import display
 from .ilfautunnom import *
 from .data import Al
 
+""""
+Ce fichier contient la fonction `ajouter_aliment`.
+"""
+
+
 def ajouter_aliment(aliment : aliment) :
     """
     Ajoute un nouvel aliment au DataFrame Al.
+
+    aliment = aliment(nom, proteines, lipides, glucides, calories, fer, calcium, fibres, prix)
+    ajouter_aliment(aliment)
+    
+    Args:
+        aliment (aliment): Un objet de type aliment contenant les informations nutritionnelles et le prix de l'aliment.
     """
     global Al
     nouvelle_ligne = [

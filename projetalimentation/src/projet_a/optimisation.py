@@ -6,11 +6,20 @@ from IPython.display import display
 from .ilfautunnom import *
 from .data import  Al, O_besoins
 
+"""
+Ce fichier contient la fonction `optimisation`.
+"""
 
 
 def optimisation(nouveau_besoins : besoins ) -> besoins:
     """
     Optimisation de l'alimentation en fonction des besoins nutritionnels en minimisant le coût
+    tout en respectant les contraintes nutritionnelles.
+    Si aucun nouveau besoin n'est fourni, les besoins par défaut sont utilisés. (Trouvable dans data.py)
+    
+    Args:
+        nouveau_besoins (besoins): Un objet de type besoins contenant les besoins nutritionnels à respecter.
+
     """
     if nouveau_besoins is None:
         besoins_opti = O_besoins

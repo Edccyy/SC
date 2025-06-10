@@ -7,6 +7,8 @@ from .ilfautunnom import *
 """
 Importation des données
 """
+
+
 Al = pd.read_csv(
                 'C:/Cours/Supply Chain/SC/projetalimentation/données/Aliments.csv', 
                 sep=';', 
@@ -15,10 +17,11 @@ Al = pd.read_csv(
 Al.iloc[[10*k for k in range(5)],:]
 
 
-
 """
 Besoin de base
 """
+
+
 O_besoins = np.array([75, # Proteines
                 90, # Lipides
                 225, # Glucides

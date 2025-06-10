@@ -1,10 +1,18 @@
 import numpy as np
 import matplotlib.pyplot as plt
+
 from .data import *
 from .aliments import ajouter_aliment
 from .besoins import ajouter_besoins
 from .ilfautunnom import *
 from .optimisation import optimisation
+
+"""
+Ce fichier contient le code pour afficher un diagramme de Kiviat
+qui compare les besoins nutritionnels et les apports obtenus par le resultat.
+Il utilise directement les données transmises par l'utilisateur et les apports obtenus
+"""
+
 
 def plot_kiviat(N_besoins: besoins, apports_obtenus: besoins, titre: str = "Diagramme de Kiviat des besoins nutritionnels"):
 

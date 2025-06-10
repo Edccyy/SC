@@ -2,10 +2,20 @@ from IPython.display import display
 
 from .ilfautunnom import *
 
+""""
+Ce fichier contient la fonction `ajouter_besoins`.
+"""
+
 
 def ajouter_besoins(T_besoins : besoins) -> besoins:
     """
     Ajoute de nouveaux besoins
+
+    N_besoins = besoins(proteines, lipides, glucides, calories, fer, calcium, fibres, jours)    
+    ajouter_besoins(N_besoins)
+    
+    Args:
+        N_besoins (besoins): Un objet de type besoins contenant les besoins nutritionnels.
     """
     global N_besoins
     N_besoins = besoins(
