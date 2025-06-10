@@ -1,4 +1,4 @@
-Dans le cadre du cours de Supply-Chain du master Mécen, j'ai écrire un code permetant de répondre à cet énoncé :
+Dans le cadre du cours de Supply-Chain du master Mécen, il m'a était demander d'écrire un code permetant de répondre à cet énoncé :
 
 Enoncer :
 
