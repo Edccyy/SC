@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import scipy.optimize as so
-from IPython.display import display
 
 from src.projet_a.data import O_besoins, Al
 

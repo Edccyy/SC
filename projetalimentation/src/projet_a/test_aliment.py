@@ -1,6 +1,5 @@
 from .aliments import ajouter_aliment
-from .data import Al
-from .ilfautunnom import *
+from .ilfautunnom import aliment
 
 """
 Ce fichier contient la fonction `test_nouveau_aliment`.

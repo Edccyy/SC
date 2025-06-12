@@ -1,9 +1,8 @@
 import numpy as np
 import pandas as pd
 import scipy.optimize as so
-from IPython.display import display
 
-from .ilfautunnom import *
+from .ilfautunnom import besoins
 from .data import  Al, O_besoins
 
 """
@@ -11,7 +10,7 @@ Ce fichier contient la fonction `optimisation`.
 """
 
 
-def optimisation(nouveau_besoins : besoins ) -> besoins:
+def optimisation(nouveau_besoins : besoins ) :
     """
     Optimisation de l'alimentation en fonction des besoins nutritionnels en minimisant le coût
     tout en respectant les contraintes nutritionnelles.
@@ -43,8 +42,6 @@ def optimisation(nouveau_besoins : besoins ) -> besoins:
     apports_obtenus = valeur_nutri @ Result.x  # produit matriciel
     pourcentages = apports_obtenus / besoins_opti * 100
 
-
-
     """
     Tableau des résultats
     """
@@ -55,6 +52,7 @@ def optimisation(nouveau_besoins : besoins ) -> besoins:
         'Besoins': besoins_opti,
         'Apport obtenu': apports_obtenus,
         '% des besoins': pourcentages})
+
 
 
 

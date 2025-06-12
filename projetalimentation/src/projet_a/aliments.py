@@ -1,6 +1,4 @@
-from IPython.display import display
-
-from .ilfautunnom import *
+from .ilfautunnom import aliment
 from .data import Al
 
 """"

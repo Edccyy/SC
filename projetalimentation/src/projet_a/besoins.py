@@ -1,6 +1,4 @@
-from IPython.display import display
-
-from .ilfautunnom import *
+from .ilfautunnom import besoins
 
 """"
 Ce fichier contient la fonction `ajouter_besoins`.

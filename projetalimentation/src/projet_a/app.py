@@ -1,9 +1,9 @@
-from .data import *
+from .data import O_besoins
 from .aliments import ajouter_aliment
 from .besoins import ajouter_besoins
-from .ilfautunnom import *
-from .optimisation import *
-from .Diagramme2   import *
+from .ilfautunnom import besoins, aliment
+from .optimisation import optimisation
+from .Diagramme2   import plot_kiviat
 
 """
 Ce fichier contient le code principal de l'application.

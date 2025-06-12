@@ -1,11 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from .data import *
-from .aliments import ajouter_aliment
-from .besoins import ajouter_besoins
-from .ilfautunnom import *
-from .optimisation import optimisation
+from .besoins import besoins
 
 """
 Ce fichier contient le code pour afficher un diagramme de Kiviat

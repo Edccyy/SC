@@ -1,6 +1,5 @@
 from .besoins import ajouter_besoins
-from .data import Al
-from .ilfautunnom import *
+from .ilfautunnom import besoins
 
 """
 Ce fichier contient la fonction `test_nouveau_besoin`.
