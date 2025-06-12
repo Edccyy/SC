@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import scipy.optimize as so
 
-from src.projet_a.data import O_besoins, Al
+from data import O_besoins, Al
 
 np.set_printoptions(precision=1, suppress=True)
 

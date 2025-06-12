@@ -1,5 +1,4 @@
 from typing import List
-from graphlib import *
 
 """
 fichier contenant les classes pour les besoins, les aliments et les résultats.

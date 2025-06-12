@@ -1,3 +1,5 @@
+import pandas as pd
+
 from .optimisation import optimisation
 from .ilfautunnom import besoins
 
