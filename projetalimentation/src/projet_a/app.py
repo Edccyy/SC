@@ -46,7 +46,7 @@ def run():
     Menu = 0
     besoins_saisie = False
     N_besoins = besoins(O_besoins[0], O_besoins[1], O_besoins[2], O_besoins[3], O_besoins[4], O_besoins[5], O_besoins[6])
-    apports_obtenus = besoins(0,0,0,0,0,0,1)# Initialisation des apports obtenus
+    apports_obtenus = besoins(0,0,0,0,0,0,1)
 
     while(True):
         if(Menu == 0):
